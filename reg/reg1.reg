@@ -1,0 +1,15 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\rrzz]
+@="rrzz Protocol Handler"
+"URL Protocol"=""
+
+[HKEY_CLASSES_ROOT\rrzz\DefaultIcon]
+@="C:\\java_projects\\serpinskyTriangle01\\serpinskyTriangle\\params.exe"
+
+[HKEY_CLASSES_ROOT\rrzz\shell]
+
+[HKEY_CLASSES_ROOT\rrzz\shell\open]
+
+[HKEY_CLASSES_ROOT\rrzz\shell\open\command]
+@="\"C:\\java_projects\\serpinskyTriangle01\\serpinskyTriangle\\params.exe\" %1"
