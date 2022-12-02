@@ -6,38 +6,19 @@ import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.border.LineBorder;
 
+import static java.awt.Component.LEFT_ALIGNMENT;
+
 /**
  * A tool for show Java-Arguments.
  */
 public class App {
     public static void main(String[] args) {
 
-        // JOptionPane.showMessageDialog(null, "A tool for java Argumente.");
-
-//        if (args == null) System.out.println("The args == null.");
-//
-//        if (args != null) System.out.println("The args != null.");
-//
-//        if (args.length == 0) {
-//            System.out.println("The args args.length == 0.");
-//        } else {
-//            System.out.println("The args are null.");
-//        }
-//
-//        if (args.length > 0) {
-//            System.out.println("The args > 0.");
-//        }
-//
-//        System.out.println("args.count(): " + Arrays.stream(args).count());
-//
-//        for (String s : args) {
-//            System.out.println("s: " + s);
-//        }
-
         // Erzeugung eines neuen Dialoges
         JDialog meinJDialog = new JDialog();
         meinJDialog.setTitle("A tool for show Java-Arguments.");
         meinJDialog.setSize(800, 200);
+        
         // JPanel wird erzeugt
         JPanel panel = new JPanel();
         // Unser JPanel erhält einen langen Schriftzug
@@ -62,9 +43,7 @@ public class App {
 
         // JScrollPane wird erzeugt; dabei wird über den
         // Konstruktor direkt unser JPanel hinzugefügt
-        JScrollPane scrollPane = new JScrollPane(panel,
-                ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,
-                ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        JScrollPane scrollPane = new JScrollPane(panel, ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 
         // JScrollPane wird dem Dialog hinzugefügt
         meinJDialog.add(scrollPane);

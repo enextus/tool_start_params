@@ -57,6 +57,30 @@
             <artifactId>maven-plugin-descriptor</artifactId>
             <version>2.2.1</version>
         </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>RELEASE</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>[6.11]</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.4.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.vintage</groupId>
+            <artifactId>junit-vintage-engine</artifactId>
+            <version>5.4.0</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -88,7 +112,6 @@
                     <artifactId>maven-deploy-plugin</artifactId>
                     <version>2.8.2</version>
                 </plugin>
-                <!-- site lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#site_Lifecycle -->
                 <plugin>
                     <artifactId>maven-site-plugin</artifactId>
                     <version>3.7.1</version>
@@ -130,72 +153,6 @@
                         </archive>
                     </configuration>
                 </plugin>
-<!--                 LAUNCH4J-->
-<!--                <plugin>-->
-<!--                    <groupId>com.akathist.maven.plugins.launch4j</groupId>-->
-<!--                    <artifactId>launch4j-maven-plugin</artifactId>-->
-<!--                    <executions>-->
-<!--                        <execution>-->
-<!--                            <id>l4j-clui</id>-->
-<!--                            <phase>package</phase>-->
-<!--                            <goals>-->
-<!--                                <goal>launch4j</goal>-->
-<!--                            </goals>-->
-<!--                            <configuration>-->
-<!--                                <headerType>console</headerType>-->
-<!--                                <jar>target/serpinskyTriangle-1.0-SNAPSHOT.jar</jar>-->
-<!--                                <outfile>target/serpinskyTriangle.exe</outfile>-->
-<!--                                <downloadUrl>http://java.com/download</downloadUrl>-->
-<!--                                <classPath>-->
-<!--                                    <mainClass>org.example.App</mainClass>-->
-<!--                                </classPath>-->
-<!--                                <jre>-->
-<!--                                    <bundledJre64Bit>false</bundledJre64Bit>-->
-<!--                                    <bundledJreAsFallback>false</bundledJreAsFallback>-->
-<!--                                    <minVersion>1.8.0</minVersion>-->
-<!--                                    <jdkPreference>preferJre</jdkPreference>-->
-<!--                                    <runtimeBits>32</runtimeBits>-->
-<!--                                </jre>-->
-<!--                                <versionInfo>-->
-<!--                                    <fileVersion>1.0.0.0</fileVersion>-->
-<!--                                    <txtFileVersion>${project.version}</txtFileVersion>-->
-<!--                                    <fileDescription>${project.name}</fileDescription>-->
-<!--                                    <copyright>C</copyright>-->
-<!--                                    <productVersion>1.0.0.0</productVersion>-->
-<!--                                    <txtProductVersion>1.0.0.0</txtProductVersion>-->
-<!--                                    <productName>${project.name}</productName>-->
-<!--                                    <internalName>AppName</internalName>-->
-<!--                                    <originalFilename>serpinskyTriangle.exe</originalFilename>-->
-<!--                                </versionInfo>-->
-<!--                            </configuration>-->
-<!--                        </execution>-->
-<!--                    </executions>-->
-<!--                </plugin>-->
-<!--                <plugin>-->
-<!--                    <groupId>org.apache.maven.plugins</groupId>-->
-<!--                    <artifactId>maven-assembly-plugin</artifactId>-->
-<!--                    <version>2.4</version>-->
-<!--                    <configuration>-->
-<!--                        <descriptorRefs>-->
-<!--                            <descriptorRef>jar-with-dependencies</descriptorRef>-->
-<!--                        </descriptorRefs>-->
-<!--                        <archive>-->
-<!--                            <manifest>-->
-<!--                                <mainClass>org.example.App</mainClass>-->
-<!--                            </manifest>-->
-<!--                        </archive>-->
-<!--                    </configuration>-->
-<!--                    <executions>-->
-<!--                        <execution>-->
-<!--                            <id>assembly</id>-->
-<!--                            <phase>package</phase>-->
-<!--                            <goals>-->
-<!--                                <goal>attached</goal>-->
-<!--                            </goals>-->
-<!--                        </execution>-->
-<!--                    </executions>-->
-<!--                </plugin>-->
-<!--                 LAUNCH4J ENDE-->
             </plugins>
         </pluginManagement>
         <plugins>
@@ -203,8 +160,8 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>8</source>
-                    <target>8</target>
+                    <source>17</source>
+                    <target>17</target>
                 </configuration>
             </plugin>
         </plugins>
