@@ -1,41 +1,49 @@
 package org.example;
 
-import java.awt.*;
+import org.other.MyFormat;
+
 import java.util.Arrays;
 import java.util.Objects;
 import javax.swing.*;
-import javax.swing.border.Border;
-import javax.swing.border.LineBorder;
-
-import static java.awt.Component.LEFT_ALIGNMENT;
 
 /**
- * A tool for show Java-Arguments.
+ * A tool for showing  Java-Arguments.
  */
 public class App {
     public static void main(String[] args) {
+
+        MyFormat myFormat = new MyFormat();
+
         // Erzeugung eines neuen Dialoges
         JDialog meinJDialog = new JDialog();
 
         meinJDialog.setTitle("A tool for show Java-Arguments.");
-        meinJDialog.setSize(800, 200);
-        
+        meinJDialog.setSize(800, 100);
+
         // JPanel wird erzeugt
         JPanel panel = new JPanel();
         // Unser JPanel erhält einen langen Schriftzug
-        panel.add(new JLabel("Shown arguments: "));
+        panel.add(new JLabel("Shown informations: "));
 
-        if (args == null) panel.add(new JLabel("The args == null "));
-        if (args != null) panel.add(new JLabel("The args != null "));
+        if (args == null) panel.add(new JLabel("The args shows: args == null "));
+        if (args != null) panel.add(new JLabel("The args shows: args != null "));
+
         if (Objects.requireNonNull(args).length == 0) {
-            panel.add(new JLabel("The args args.length == 0 "));
-        } else panel.add(new JLabel("args are != 0 "));
-        if (args.length > 0) panel.add(new JLabel("The args > 0 "));
+            panel.add(new JLabel("The args shows: args.length == 0 "));
+        } else panel.add(new JLabel("The args shows: args != 0 "));
+
+        if (args.length > 0) panel.add(new JLabel("The args shows: args > 0 "));
 
         panel.add(new JLabel(" args.count(): " + Arrays.stream(args).count() + " "));
 
+        // JLabel l = new JLabel("<html>Hello World!<br/><br/><br/>blahblahblah</html>", SwingConstants.CENTER);
+
+        JLabel spacer;
+        JButton continueBtn = new JButton("Continue");
+        JButton quitBtn = new JButton("Quit");
+
         for (String s : args) {
-            panel.add(new JLabel(" arg: " + s + " "));
+            panel.add(new JLabel(" arg: " + s + "   | "));
         }
 
         // JScrollPane wird erzeugt; dabei wird über den
@@ -45,6 +53,7 @@ public class App {
         meinJDialog.add(scrollPane);
         // Wir lassen unseren Dialog anzeigen
         meinJDialog.setVisible(true);
+
     }
 
 }
