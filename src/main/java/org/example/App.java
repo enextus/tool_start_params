@@ -43,9 +43,6 @@ public class App {
 
         panel.add(new JLabel(" args.count(): " + Arrays.stream(args).count() + " "));
 
-        // JLabel l = new JLabel("<html>Hello World!<br/><br/><br/>blahblahblah</html>", SwingConstants.CENTER);
-
-
         for (String a : args) {
             panel.add(new JLabel(" arg: " + a + "   | "));
             panel.add(new JLabel(" Bytes: " + Arrays.toString(a.getBytes(StandardCharsets.UTF_8)) + " | "));
@@ -54,9 +51,6 @@ public class App {
         JButton quitButton = new JButton("Quit");
         quitButton.addActionListener(e -> System.exit(0));
         panel.add(quitButton);
-
-//        panel.add(new JButton("Continue"));
-//        panel.add(new JButton("Quit"));
 
         // JScrollPane wird erzeugt; dabei wird über den
         // Konstruktor direkt unser JPanel hinzugefügt
