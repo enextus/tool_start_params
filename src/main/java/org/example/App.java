@@ -10,8 +10,6 @@ import javax.swing.*;
  */
 public class App {
     public static void main(String[] args) {
-//        MyFormat myFormat = new MyFormat();
-
         // Erzeugung eines neuen Dialoges
         JDialog meinJDialog = new JDialog();
 
